@@ -781,20 +781,7 @@ body.light-slide-active .counter {
     max-width: calc(100vw - 110px);
   }
 
-  /* Contador e botão de fullscreen menores, para não competir por espaço no topo */
-  .counter {
-    top: calc(10px + var(--safe-top));
-    right: 14px;
-    padding: 5px 10px;
-    font-size: 0.72rem;
-  }
-
-  .fullscreen-btn {
-    top: calc(10px + var(--safe-top));
-    left: 14px;
-    padding: 5px 10px;
-    font-size: 0.72rem;
-  }
+  
 
   /* Créditos: linha de alunos com scroll horizontal suave em vez de quebrar feio */
   .students-row {
@@ -840,7 +827,7 @@ body.light-slide-active .counter {
     height: 34px;
   }
 }
-/* Botão de Tela Cheia */
+
 
 /* ==========================================================================
    ACESSIBILIDADE E ANIMAÇÕES DE TRANSIÇÃO
