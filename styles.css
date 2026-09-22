@@ -841,30 +841,6 @@ body.light-slide-active .counter {
   }
 }
 /* Botão de Tela Cheia */
-.fullscreen-btn {
-  position: fixed;
-  top: calc(16px + var(--safe-top));
-  left: 24px;
-  z-index: 50;
-  background: rgba(14, 23, 30, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
-  color: var(--ink-text);
-  border-radius: 20px;
-  padding: 6px 14px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: all 200ms ease;
-}
-
-.fullscreen-btn:hover {
-  background: var(--ink-soft);
-  transform: scale(1.04);
-}
 
 /* ==========================================================================
    ACESSIBILIDADE E ANIMAÇÕES DE TRANSIÇÃO
