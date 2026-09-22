@@ -695,7 +695,151 @@ body.light-slide-active .counter {
   width: 20px;
   border-radius: 6px;
 }
+/* ==========================================================================
+   OTIMIZAÇÕES PARA CELULAR (não afeta desktop/tablet)
+   ========================================================================== */
+@media (max-width: 600px) {
 
+  /* Slides: menos padding lateral e vertical para aproveitar a tela */
+  .slide {
+    padding: clamp(20px, 5vh, 40px) 20px;
+  }
+
+  /* Evita que a mídia (fotos/imagens) tome a tela toda em telas altas e estreitas */
+  .slide-media-box {
+    max-height: 260px;
+    border-radius: 14px;
+  }
+
+  .cover-illustration {
+    max-height: 260px;
+    border-radius: 16px;
+  }
+
+  /* Compare grid: remove o "vs" circular do meio para poupar espaço vertical */
+  .compare-vs {
+    padding: 6px 10px;
+    font-size: 1rem;
+    margin: -4px auto;
+  }
+
+  .compare-card {
+    padding: 18px;
+  }
+
+  /* Grid de ícones: cards menores e mais compactos */
+  .icon-features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+  }
+
+  .icon-feature-item {
+    padding: 10px 14px;
+  }
+
+  .icon-feature-item span {
+    font-size: 0.88rem;
+  }
+
+  /* Badge menor */
+  .icon-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    margin-bottom: 14px;
+  }
+
+  .icon-badge svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Callout mais discreto */
+  .callout {
+    padding: 14px 16px;
+    margin-top: 16px;
+  }
+
+  /* Navegação inferior: botões e dots mais compactos, evita overflow lateral */
+  .nav {
+    gap: 10px;
+    bottom: calc(14px + var(--safe-bottom));
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-btn svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .dots {
+    padding: 6px 12px;
+    max-width: calc(100vw - 110px);
+  }
+
+  /* Contador e botão de fullscreen menores, para não competir por espaço no topo */
+  .counter {
+    top: calc(10px + var(--safe-top));
+    right: 14px;
+    padding: 5px 10px;
+    font-size: 0.72rem;
+  }
+
+  .fullscreen-btn {
+    top: calc(10px + var(--safe-top));
+    left: 14px;
+    padding: 5px 10px;
+    font-size: 0.72rem;
+  }
+
+  /* Créditos: linha de alunos com scroll horizontal suave em vez de quebrar feio */
+  .students-row {
+    gap: 12px;
+  }
+}
+
+/* Telas muito estreitas (celulares pequenos) */
+@media (max-width: 380px) {
+  .cover-title {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+
+  .nav-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .dots {
+    max-width: calc(100vw - 96px);
+  }
+}
+
+/* Telas baixas em paisagem (celular deitado) — prioriza altura disponível */
+@media (max-height: 420px) and (orientation: landscape) {
+  .slide {
+    padding: 16px clamp(24px, 6vw, 60px);
+    justify-content: flex-start;
+    padding-top: calc(50px + var(--safe-top));
+  }
+
+  .slide-media-box,
+  .cover-illustration {
+    max-height: 160px;
+  }
+
+  .nav {
+    bottom: calc(8px + var(--safe-bottom));
+  }
+
+  .nav-btn {
+    width: 34px;
+    height: 34px;
+  }
+}
 /* Botão de Tela Cheia */
 .fullscreen-btn {
   position: fixed;
